@@ -9,6 +9,9 @@ namespace Memo.DBContext
 {
     public class MemoDbContext : DbContext
     {
+        public MemoDbContext(DbContextOptions<MemoDbContext> options) : base()
+        {
+        }
         public DbSet<Item> Items { get; set; }
         public DbSet<Supplier> Suppliers { get; set; }
         public DbSet<Buyer> Buyers { get; set; }
